@@ -1,0 +1,9 @@
+---
+- hosts: all 
+  remote_user: ubuntu
+  tasks:
+  - name: copy files to webserver
+    become: yes 
+    copy:
+      src: .
+      dest: /var/www/html
